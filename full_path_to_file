@@ -1,0 +1,12 @@
+# iterator and callbacks
+import os
+import os.path
+os.listdir('./mystuff')
+
+def files_for_processing(path):
+	lst_ = os.listdir(path)
+	lst_.sort()
+	for file_ in lst_:
+		yield os.path.abspath(file_) 
+for file in os.listdir('./mystuff')
+	print(file)
